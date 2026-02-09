@@ -1,5 +1,5 @@
 :root {
-  --bg: #111214;
+  --bg: #1c1f24;
   --panel: #17191d;
   --ink: #f4f4f2;
   --muted: #b0b6bf;
@@ -16,7 +16,7 @@ body {
   margin: 0;
   font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
   color: var(--ink);
-  background: var(--bg);
+  background: linear-gradient(135deg, #1c1f24 0%, #222833 45%, #1a2b45 100%);
   line-height: 1.6;
 }
 
@@ -62,7 +62,7 @@ a {
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 40px;
   align-items: center;
 }
@@ -322,4 +322,23 @@ h1 {
     animation: none !important;
     transition: none !important;
   }
+}
+.hero-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 24px;
+  border-radius: 18px;
+}
+
+.hero-card ul {
+  padding-left: 18px;
+  margin: 16px 0 0;
+  color: var(--muted);
+}
+
+.card-top {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
 }
