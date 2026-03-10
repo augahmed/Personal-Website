@@ -230,6 +230,55 @@ h1 {
   font-size: 16px;
 }
 
+.skills-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.skills-hint {
+  margin: 0;
+  font-size: 14px;
+}
+
+.skills-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tab {
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: border 0.2s ease, color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.skill-tab:hover {
+  color: var(--ink);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.skill-tab.is-active {
+  background: rgba(244, 178, 95, 0.15);
+  color: var(--ink);
+  border-color: rgba(244, 178, 95, 0.5);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.28);
+}
+
+.skills-display {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 18px 20px;
+  border-radius: 16px;
+}
+
 .muted {
   color: var(--muted);
 }

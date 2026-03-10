@@ -82,6 +82,17 @@
           </div>
         </article>
         <article class="project">
+          <div class="project-title">AI NPC Platformer</div>
+          <div class="project-meta">
+            Built a browser-based platformer with interactive NPCs and optional AI-powered dialogue,
+            combining game logic, level progression, and local server integration for a more dynamic
+            player experience.
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/augahmed/AI_NPC_Platformer" target="_blank" rel="noreferrer">Repository</a>
+          </div>
+        </article>
+        <article class="project">
           <div class="project-title">Personal Website</div>
           <div class="project-meta">HTML • CSS</div>
           <ul>
@@ -117,22 +128,17 @@
           learning systems.
         </p>
       </div>
-      <div class="skills">
-        <div>
-          <h3>Languages</h3>
-          <p>Python, Java, C, Go, JavaScript, Assembly, R</p>
+      <div class="skills-panel">
+        <p class="skills-hint muted">Tap a category to explore.</p>
+        <div class="skills-tabs" role="tablist" aria-label="Skill categories">
+          <button class="skill-tab is-active" data-skill="programming" type="button">Programming</button>
+          <button class="skill-tab" data-skill="frameworks" type="button">Frameworks/Libraries</button>
+          <button class="skill-tab" data-skill="systems" type="button">Systems &amp; AI</button>
+          <button class="skill-tab" data-skill="tools" type="button">Tools</button>
         </div>
-        <div>
-          <h3>Systems & Concepts</h3>
-          <p>Distributed Systems, Artificial Intelligence</p>
-        </div>
-        <div>
-          <h3>Tools</h3>
-          <p>Git</p>
-        </div>
-        <div>
-          <h3>Math Foundations</h3>
-          <p>Probability, Statistics, Linear Algebra, Abstract Algebra, Combinatorics</p>
+        <div class="skills-display" role="tabpanel" aria-live="polite">
+          <h3>Programming</h3>
+          <p>Python, Java, C, Assembly, Go, JavaScript, R, HTML, CSS</p>
         </div>
       </div>
     </section>
@@ -193,5 +199,43 @@
     <span>© 2026 August Ahmed</span>
     <a href="#top">Back to top</a>
   </footer>
+
+  <script>
+    const skillData = {
+      programming: {
+        title: "Programming",
+        items: "Python, Java, C, Assembly, Go, JavaScript, R, HTML, CSS",
+      },
+      frameworks: {
+        title: "Frameworks/Libraries",
+        items: "Node.js, Pygame, NumPy",
+      },
+      systems: {
+        title: "Systems & AI",
+        items: "Distributed Systems, Reinforcement Learning, AI APIs",
+      },
+      tools: {
+        title: "Tools",
+        items: "Git, Linux, REST APIs",
+      },
+    };
+
+    const tabs = document.querySelectorAll(".skill-tab");
+    const display = document.querySelector(".skills-display");
+
+    if (tabs.length && display) {
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const key = tab.dataset.skill;
+          if (!key || !skillData[key]) return;
+
+          tabs.forEach((t) => t.classList.remove("is-active"));
+          tab.classList.add("is-active");
+
+          display.innerHTML = `<h3>${skillData[key].title}</h3><p>${skillData[key].items}</p>`;
+        });
+      });
+    }
+  </script>
 </body>
 </html>
