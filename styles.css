@@ -249,9 +249,9 @@ h1 {
 .skill-tab {
   padding: 10px 16px;
   border-radius: 999px;
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--muted);
+  border: 1px solid rgba(244, 178, 95, 0.5);
+  background: rgba(244, 178, 95, 0.12);
+  color: var(--ink);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -266,7 +266,7 @@ h1 {
 }
 
 .skill-tab.is-active {
-  background: rgba(244, 178, 95, 0.15);
+  background: rgba(244, 178, 95, 0.28);
   color: var(--ink);
   border-color: rgba(244, 178, 95, 0.5);
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.28);
