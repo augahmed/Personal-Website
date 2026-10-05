@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="August Ahmed — Software Engineering Intern. Projects in ML systems, full-stack applications, AI games, and distributed systems." />
-  <title>August Ahmed | Software Engineering Intern</title>
+  <meta name="description" content="August Ahmed — Boston University Mathematics and Computer Science student with experience in AI agents, RAG pipelines, test automation, and full-stack applications." />
+  <title>August Ahmed | Software Engineering</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,10 +27,11 @@
         <h1>August Ahmed</h1>
         <p class="lead">
           Mathematics &amp; Computer Science student at Boston University with software engineering
-          experience in API test automation, Go-based ML systems, and full-stack application development.
+          experience building AI agents, RAG pipelines, test automation, and full-stack applications.
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn ghost" href="assets/august-ahmed-resume.pdf" target="_blank" rel="noreferrer">View resume</a>
         </div>
         <div class="meta">
           <span>Boston, MA</span>
@@ -40,7 +41,7 @@
       <div class="hero-card">
         <div class="card-top">Focus</div>
         <ul>
-          <li>API automation, test workflows, and service validation</li>
+          <li>AI agents, retrieval-augmented generation, and test-analysis workflows</li>
           <li>Go-based transformers, training pipelines, and inference systems</li>
           <li>Full-stack product logic with thoughtful authorization and edge cases</li>
         </ul>
@@ -54,43 +55,100 @@
         <p class="eyebrow">Selected Work</p>
         <h2>Projects</h2>
       </div>
+      <div class="featured-projects">
+        <article class="project project-featured">
+          <div class="project-story">
+            <h3 class="project-title">OpenShed</h3>
+            <div class="project-meta">React Native • Expo • Spring Boot • PostgreSQL • Supabase</div>
+            <p class="project-date">Jan 2026 – May 2026</p>
+            <p class="project-description">A community marketplace that helps neighbors borrow tools and connect over repair jobs instead of buying more or throwing things away. Built for iOS and Android, OpenShed brings nearby tools and repair opportunities onto a map, with messaging and peer reviews to help people coordinate and build trust.</p>
+            <h4>My contributions</h4>
+            <ul>
+              <li>Collaborated with a team to build the mobile marketplace and its Spring Boot backend.</li>
+              <li>Designed persistent messaging with participant-based authorization, inbox and chat DTOs, REST endpoints, and user blocking.</li>
+              <li>Built transaction-gated ratings and reviews across borrowing and repair workflows, including eligibility checks, aggregation, profile summaries, and mobile submission flows.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/sushib0mb/OpenShed" target="_blank" rel="noreferrer">Repository</a>
+            </div>
+          </div>
+          <div class="project-gallery" aria-label="OpenShed app screenshots">
+            <figure>
+              <a href="assets/openshed-borrow.png" target="_blank" rel="noreferrer" aria-label="View full-size OpenShed borrowing screenshot">
+                <img src="assets/openshed-borrow.png" alt="OpenShed borrowing screen with date and category filters, a map of tools, and listings with request and message actions." width="1280" height="2856" loading="lazy" decoding="async" />
+              </a>
+              <figcaption><strong>Borrow tools</strong><span>Find tools on the map, filter by availability, and request a rental.</span></figcaption>
+            </figure>
+            <figure>
+              <a href="assets/openshed-repair.png" target="_blank" rel="noreferrer" aria-label="View full-size OpenShed repair screenshot">
+                <img src="assets/openshed-repair.png" alt="OpenShed repairs screen with category filters, a map of repair jobs, and listings with budgets, message actions, and bidding." width="1280" height="2856" loading="lazy" decoding="async" />
+              </a>
+              <figcaption><strong>Connect over repairs</strong><span>Browse repair jobs, message neighbors, and bid on work.</span></figcaption>
+            </figure>
+          </div>
+        </article>
+        <article class="project project-featured">
+          <div class="project-story">
+            <h3 class="project-title">Aurelius</h3>
+            <div class="project-meta">Go • Transformers • ML Systems • JavaScript</div>
+            <p class="project-date">May 2026 – Jul 2026</p>
+            <p class="project-description">A Go toolkit for training, evaluating, and serving small math-focused language models locally. Aurelius combines synthetic arithmetic and polynomial-derivative datasets, a CPU inference runtime, and a browser chat interface for reproducible experiments. Its math router selects specialist models and can optionally correct their answers with deterministic solvers; raw model output remains experimental.</p>
+            <h4>My contributions</h4>
+            <ul>
+              <li>Implemented a byte-level causal transformer and training pipeline in Go.</li>
+              <li>Built Adam optimization, learning-rate scheduling, gradient clipping, and checkpoint save/resume.</li>
+              <li>Generated synthetic arithmetic and polynomial-derivative curricula with exact-match evaluation across difficulty levels, prompt formats, and edge cases.</li>
+              <li>Built a hybrid inference router that validates model outputs with deterministic solvers and serves responses through a browser-based chat interface.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/augahmed/Aurelius" target="_blank" rel="noreferrer">Repository</a>
+            </div>
+          </div>
+          <div class="project-gallery project-gallery-single">
+            <figure>
+              <a href="assets/aurelius-chat.png" target="_blank" rel="noreferrer" aria-label="View full-size Aurelius chat screenshot">
+                <img src="assets/aurelius-chat.png" alt="Aurelius local math chat interface showing a polynomial derivative answer and the multiplication result for 11 times 12." width="1982" height="1382" loading="lazy" decoding="async" />
+              </a>
+              <figcaption><strong>Local math runtime</strong><span>A browser interface for arithmetic and polynomial-derivative questions, with adjustable generation controls.</span></figcaption>
+            </figure>
+          </div>
+        </article>
+        <article class="project project-featured">
+          <div class="project-story">
+            <h3 class="project-title">AI NPC Platformer</h3>
+            <div class="project-meta">JavaScript • HTML5 Canvas • Node.js • xAI API</div>
+            <p class="project-date">Jan 2026 – Feb 2026</p>
+            <p class="project-description">A browser platformer that combines connected rooms, physics-based movement, and conversations with NPCs. Players ask a bartender for a portal key and a miner for a pickaxe to clear a blocked path. A lightweight Node.js server provides optional AI-generated dialogue through xAI, while local scripted replies keep the game playable without external services. Progression uses simple response-intent checks to update inventory and unlock obstacles.</p>
+            <h4>My contributions</h4>
+            <ul>
+              <li>Built the HTML5 Canvas game loop, movement physics, collision detection, connected levels, and inventory-gated obstacles in vanilla JavaScript.</li>
+              <li>Developed a Node.js API proxy that supplies NPC identity, conversation outcome hints, and inventory context to xAI for short in-character replies.</li>
+              <li>Implemented free-text NPC interactions and local fallback dialogue so gameplay continues when AI requests fail or are not configured.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/augahmed/AI_NPC_Platformer" target="_blank" rel="noreferrer">Repository</a>
+            </div>
+          </div>
+          <div class="project-gallery project-gallery-single">
+            <figure>
+              <a href="assets/ai-npc-platformer.png" target="_blank" rel="noreferrer" aria-label="View full-size AI NPC Platformer screenshot">
+                <img src="assets/ai-npc-platformer.png" alt="AI NPC Platformer showing platforms, a locked portal, and a free-text conversation with the bartender about obtaining a key." width="1964" height="1430" loading="lazy" decoding="async" />
+              </a>
+              <figcaption><strong>Conversation meets platforming</strong><span>Ask the bartender for a key to unlock the portal and continue through connected rooms.</span></figcaption>
+            </figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="more-projects">
+      <div class="section-header">
+        <p class="eyebrow">Further Exploration</p>
+        <h2>More Projects</h2>
+      </div>
       <div class="grid">
         <article class="project">
-          <div class="project-title">Aurelius</div>
-          <div class="project-meta">Go • Transformers • ML Systems • JavaScript</div>
-          <ul>
-            <li>Implemented a byte-level causal transformer and training pipeline in Go.</li>
-            <li>Built Adam optimization, learning-rate scheduling, gradient clipping, and checkpoint save/resume.</li>
-            <li>Generated synthetic arithmetic and polynomial-derivative curricula with exact-match evaluation.</li>
-            <li>Created a hybrid inference router that validates model outputs with deterministic solvers.</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/augahmed/Aurelius" target="_blank" rel="noreferrer">Repository</a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="project-title">OpenShed</div>
-          <div class="project-meta">React Native • Expo • Spring Boot • PostgreSQL • Supabase</div>
-          <ul>
-            <li>Collaborated on a mobile marketplace for peer-to-peer tool borrowing and repair services.</li>
-            <li>Designed persistent messaging with participant-based authorization, inbox and chat DTOs, REST endpoints, and user blocking.</li>
-            <li>Built transaction-gated ratings and reviews with eligibility checks, aggregation, profile summaries, and mobile submission flows.</li>
-          </ul>
-        </article>
-        <article class="project">
-          <div class="project-title">AI NPC Platformer</div>
-          <div class="project-meta">JavaScript • HTML5 Canvas • Node.js • xAI API</div>
-          <ul>
-            <li>Built a vanilla JavaScript platformer with a real-time game loop, physics, collision detection, level progression, NPCs, and inventory-gated mechanics.</li>
-            <li>Developed a Node.js API proxy for xAI-generated NPC dialogue using the Fetch API.</li>
-            <li>Added client-side fallback responses that preserve playability without backend configuration.</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/augahmed/AI_NPC_Platformer" target="_blank" rel="noreferrer">Repository</a>
-          </div>
-        </article>
-        <article class="project">
-          <div class="project-title">Raft Consensus Algorithm</div>
+          <h3 class="project-title">Raft Consensus Algorithm</h3>
           <div class="project-meta">Distributed Systems • Go</div>
           <ul>
             <li>Implemented a fault-tolerant replicated state machine using Raft.</li>
@@ -102,7 +160,7 @@
           </div>
         </article>
         <article class="project">
-          <div class="project-title">Pac-Man AI (Q-Learning Agent)</div>
+          <h3 class="project-title">Pac-Man AI (Q-Learning Agent)</h3>
           <div class="project-meta">Python • Pygame</div>
           <ul>
             <li>Designed reward functions and state representation to stabilize learning.</li>
@@ -114,7 +172,7 @@
           </div>
         </article>
         <article class="project">
-          <div class="project-title">Personal Website</div>
+          <h3 class="project-title">Personal Website</h3>
           <div class="project-meta">HTML • CSS</div>
           <ul>
             <li>Designed and built a clean, responsive personal site.</li>
@@ -126,7 +184,7 @@
           </div>
         </article>
         <article class="project">
-          <div class="project-title">Image Calculator in C</div>
+          <h3 class="project-title">Image Calculator in C</h3>
           <div class="project-meta">C • Image Processing</div>
           <ul>
             <li>Implemented image-based arithmetic operations in C.</li>
@@ -153,14 +211,13 @@
         <p class="skills-hint muted">Tap a category to explore.</p>
         <div class="skills-tabs" role="tablist" aria-label="Skill categories">
           <button class="skill-tab is-active" data-skill="programming" type="button">Programming</button>
-          <button class="skill-tab" data-skill="frameworks" type="button">Frameworks/Libraries</button>
-          <button class="skill-tab" data-skill="systems" type="button">Systems &amp; AI</button>
-          <button class="skill-tab" data-skill="tools" type="button">Tools</button>
-          <button class="skill-tab" data-skill="math" type="button">Math Foundations</button>
+          <button class="skill-tab" data-skill="frameworks" type="button">Frameworks</button>
+          <button class="skill-tab" data-skill="systems" type="button">AI &amp; Software Concepts</button>
+          <button class="skill-tab" data-skill="tools" type="button">Tools &amp; Platforms</button>
         </div>
         <div class="skills-display" role="tabpanel" aria-live="polite">
           <h3>Programming</h3>
-          <p>Python, Java, SQL, C, Assembly, Go, JavaScript, R, HTML, CSS</p>
+          <p>Python, Java, SQL, C, Go, JavaScript, R</p>
         </div>
       </div>
     </section>
@@ -173,20 +230,18 @@
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-title">State Street | Charles River Development — Software Engineer Intern</div>
-          <div class="timeline-meta">Jun 2026 – Present</div>
+          <div class="timeline-meta">Jun 2026 – Aug 2026</div>
           <ul>
-            <li>Built containerized API test workflows with Docker and CRD's Cucumber-based BEATS framework.</li>
-            <li>Expanded automated service validation and reduced manual regression testing.</li>
-            <li>Developed GitHub Copilot skills and agents that transform internal documentation into a vectorized knowledge base.</li>
-            <li>Retrieved relevant context through RAG to accelerate API test-case creation and improve alignment with internal standards.</li>
+            <li>Engineered a retrieval-ready knowledge base by converting internal documentation and test assets into chunked Markdown files, creating a reusable source of engineering context for vector indexing and GitHub Copilot agents.</li>
+            <li>Developed a three-agent pipeline that analyzed C# test suites and added reusable entry points, coverage observations, and supporting code to the knowledge base, expanding the evidence available for test-analysis workflows.</li>
+            <li>Implemented a general-purpose GitHub Copilot agent that searches a local vector index, iteratively refines queries, and produces cited responses grounded in company documentation.</li>
           </ul>
         </div>
         <div class="timeline-item">
           <div class="timeline-title">Playa Bowls — Team Member</div>
           <div class="timeline-meta">Boston, MA • Jun 2025 – Sep 2025</div>
           <ul>
-            <li>Managed customer orders during peak-volume shifts while maintaining efficient service.</li>
-            <li>Coordinated with teammates to keep service moving under time pressure.</li>
+            <li>Managed customer orders and coordinated with teammates during peak-volume shifts to maintain efficient service.</li>
           </ul>
         </div>
       </div>
@@ -200,7 +255,7 @@
       <div class="edu">
         <p><strong>BA, Mathematics and Computer Science</strong> — May 2027</p>
         <p>GPA 3.9 • Dean’s List</p>
-        <p>Coursework: Algorithms, Computer Systems, Software Engineering, Mathematical Statistics, Probability, Game Theory</p>
+        <p>Coursework: Distributed Systems, Computer Systems, Software Engineering, Mathematical Statistics, Analysis of Algorithms, Concepts of Programming Languages</p>
       </div>
     </section>
 
@@ -226,7 +281,7 @@
         <p class="eyebrow">Contact</p>
         <h2>Let’s build something reliable.</h2>
         <p class="muted">
-          Email is the fastest way to reach me. I’m open to software engineering internships.
+          Email is the fastest way to reach me about software engineering opportunities.
         </p>
       </div>
       <div class="contact-card">
@@ -252,23 +307,19 @@
     const skillData = {
       programming: {
         title: "Programming",
-        items: "Python, Java, SQL, C, Assembly, Go, JavaScript, R, HTML, CSS",
+        items: "Python, Java, SQL, C, Go, JavaScript, R",
       },
       frameworks: {
-        title: "Frameworks/Libraries",
-        items: "Spring Boot, React Native, Node.js, Expo, Cucumber, Pygame, NumPy",
+        title: "Frameworks",
+        items: "Spring Boot, React Native, Node.js, Expo, Cucumber",
       },
       systems: {
-        title: "Systems & AI",
-        items: "Distributed Systems, Reinforcement Learning, RAG, Transformers, AI APIs",
+        title: "AI & Software Concepts",
+        items: "Vector Embeddings, REST APIs, Test Automation, RAG, Transformers",
       },
       tools: {
-        title: "Tools",
-        items: "Git, Docker, Linux, REST APIs, Supabase, PostgreSQL",
-      },
-      math: {
-        title: "Math Foundations",
-        items: "Probability, Statistics, Linear Algebra, Abstract Algebra, Combinatorics",
+        title: "Tools & Platforms",
+        items: "Git, Docker, Linux, PostgreSQL, Supabase, GitHub Copilot, Jira, Confluence",
       },
     };
 

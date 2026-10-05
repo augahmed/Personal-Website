@@ -172,6 +172,7 @@ h1 {
 }
 
 .project-title {
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 6px;
@@ -188,6 +189,92 @@ h1 {
 .project ul {
   padding-left: 18px;
   color: var(--muted);
+}
+
+.featured-projects {
+  display: grid;
+  gap: 24px;
+}
+
+.project-featured {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 36px;
+  padding: 32px;
+  align-items: center;
+}
+
+.project-featured .project-title {
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+}
+
+.project-date {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+
+.project-description {
+  color: var(--muted);
+  margin: 0 0 24px;
+}
+
+.project-story h4 {
+  margin: 0 0 10px;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 560px;
+  width: 100%;
+  justify-self: center;
+}
+
+.project-gallery figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.project-gallery-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.project-gallery a {
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.project-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-gallery figcaption {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.project-gallery figcaption strong,
+.project-gallery figcaption span {
+  display: block;
+}
+
+.project-gallery figcaption strong {
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
 }
 
 .project-links {
@@ -353,6 +440,9 @@ h1 {
 }
 
 @media (max-width: 900px) {
+  .project-featured {
+    grid-template-columns: 1fr;
+  }
   .hero-content {
     grid-template-columns: 1fr;
   }
@@ -367,6 +457,26 @@ h1 {
 
   .nav-links {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-featured {
+    padding: 22px;
+    gap: 24px;
+  }
+
+  .project-gallery {
+    gap: 12px;
+  }
+
+  .meta,
+  .contact-row {
+    flex-wrap: wrap;
+  }
+
+  .contact-link {
+    overflow-wrap: anywhere;
   }
 }
 
