@@ -228,7 +228,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
-  max-width: 560px;
+  max-width: 380px;
   width: 100%;
   justify-self: center;
 }
@@ -240,6 +240,7 @@ h1 {
 
 .project-gallery-single {
   grid-template-columns: minmax(0, 1fr);
+  max-width: 480px;
 }
 
 .project-gallery a {
@@ -252,7 +253,14 @@ h1 {
 .project-gallery img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
+  max-height: 420px;
+  object-fit: contain;
+}
+
+.project-gallery-single img {
+  max-height: 340px;
 }
 
 .project-gallery figcaption {
