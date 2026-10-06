@@ -193,15 +193,48 @@ h1 {
 
 .featured-projects {
   display: grid;
-  gap: 24px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+  max-width: 1240px;
+  margin-inline: auto;
 }
 
 .project-featured {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 36px;
-  padding: 32px;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(28px, 4vw, 64px);
+  padding: clamp(24px, 3vw, 44px);
   align-items: center;
+  min-width: 0;
+}
+
+.project-featured:hover {
+  transform: none;
+}
+
+.project-story {
+  min-width: 0;
+}
+
+.project-details {
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.project-details summary {
+  cursor: pointer;
+  color: var(--accent);
+  padding-block: 8px;
+}
+
+.project-details summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.project-featured .project-meta {
+  letter-spacing: 0.08em;
+  line-height: 1.8;
 }
 
 .project-featured .project-title {
@@ -228,9 +261,13 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
-  max-width: 380px;
+  max-width: 440px;
   width: 100%;
   justify-self: center;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: linear-gradient(145deg, #232831, #13161a);
 }
 
 .project-gallery figure {
@@ -240,12 +277,12 @@ h1 {
 
 .project-gallery-single {
   grid-template-columns: minmax(0, 1fr);
-  max-width: 480px;
+  max-width: 560px;
 }
 
 .project-gallery a {
   display: block;
-  border-radius: 18px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--shadow);
 }
@@ -255,7 +292,7 @@ h1 {
   width: 100%;
   max-width: 100%;
   height: auto;
-  max-height: 420px;
+  max-height: 440px;
   object-fit: contain;
 }
 
@@ -468,6 +505,12 @@ button:focus-visible {
   }
 }
 
+@media (min-width: 761px) and (max-width: 900px) {
+  .project-featured {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
 @media (max-width: 480px) {
   .project-featured {
     padding: 22px;
@@ -476,6 +519,7 @@ button:focus-visible {
 
   .project-gallery {
     gap: 12px;
+    padding: 12px;
   }
 
   .meta,
