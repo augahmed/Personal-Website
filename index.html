@@ -31,7 +31,7 @@
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="#contact">Get in touch</a>
-          <a class="btn ghost" href="assets/august-ahmed-resume.pdf" target="_blank" rel="noreferrer">View resume</a>
+          <a class="btn ghost" href="assets/august-ahmed-resume.pdf?v=20261027" target="_blank" rel="noreferrer">View resume</a>
         </div>
         <div class="meta">
           <span>Boston, MA</span>
@@ -56,6 +56,33 @@
         <h2>Projects</h2>
       </div>
       <div class="featured-projects">
+        <article class="project project-featured">
+          <div class="project-story">
+            <h3 class="project-title">MailPilot</h3>
+            <div class="project-meta">Go • React • TypeScript • Rust • SQLite • ONNX</div>
+            <p class="project-date">Sep 2026 – Oct 2026</p>
+            <p class="project-description">A local-first Gmail desktop app that brings your mail into focus. MailPilot combines keyword and semantic search with email classification, phishing risk indicators, and optional RAG-powered answers with source citations. A local SQLite cache keeps mail available on your device, while a synthetic demo lets you explore the app with fictional messages.</p>
+            <details class="project-details">
+              <summary>My engineering contributions</summary>
+              <ul>
+                <li>Built a Gmail desktop application with React, TypeScript, Rust, and Go, including OAuth authentication, local storage, and incremental email synchronization.</li>
+                <li>Designed hybrid search combining MiniLM embeddings, ONNX Runtime, and keyword retrieval, identifying 95% of relevant emails within the top 10 results during evaluation.</li>
+                <li>Integrated semantic email classification, phishing risk detection, and RAG-powered question answering with source citations and approval for each external AI request.</li>
+              </ul>
+            </details>
+            <div class="project-links">
+              <a href="https://github.com/augahmed/MailPilot" target="_blank" rel="noreferrer">Repository</a>
+            </div>
+          </div>
+          <div class="project-gallery project-gallery-single">
+            <figure>
+              <a href="assets/mailpilot-dashboard.png" target="_blank" rel="noreferrer" aria-label="View full-size MailPilot dashboard screenshot">
+                <img src="assets/mailpilot-dashboard.png" alt="MailPilot desktop dashboard in synthetic demo mode, showing local email indexing, email search, cited answers, classification, and Gmail organization tools." width="2200" height="1602" loading="lazy" decoding="async" />
+              </a>
+              <figcaption><strong>Your mail, in focus</strong><span>A local workspace for searching and organizing email, shown with a fictional demo mailbox.</span></figcaption>
+            </figure>
+          </div>
+        </article>
         <article class="project project-featured">
           <div class="project-story">
             <h3 class="project-title">OpenShed</h3>
@@ -216,14 +243,13 @@
       <div class="skills-panel">
         <p class="skills-hint muted">Tap a category to explore.</p>
         <div class="skills-tabs" role="tablist" aria-label="Skill categories">
-          <button class="skill-tab is-active" data-skill="programming" type="button">Programming</button>
+          <button class="skill-tab is-active" data-skill="languages" type="button">Languages</button>
           <button class="skill-tab" data-skill="frameworks" type="button">Frameworks</button>
-          <button class="skill-tab" data-skill="systems" type="button">AI &amp; Software Concepts</button>
           <button class="skill-tab" data-skill="tools" type="button">Tools &amp; Platforms</button>
         </div>
         <div class="skills-display" role="tabpanel" aria-live="polite">
-          <h3>Programming</h3>
-          <p>Python, Java, SQL, C, Go, JavaScript, R</p>
+          <h3>Languages</h3>
+          <p>Java, Python, Go, SQL, TypeScript, C, JavaScript, Rust, R</p>
         </div>
       </div>
     </section>
@@ -311,21 +337,17 @@
 
   <script>
     const skillData = {
-      programming: {
-        title: "Programming",
-        items: "Python, Java, SQL, C, Go, JavaScript, R",
+      languages: {
+        title: "Languages",
+        items: "Java, Python, Go, SQL, TypeScript, C, JavaScript, Rust, R",
       },
       frameworks: {
         title: "Frameworks",
-        items: "Spring Boot, React Native, Node.js, Expo, Cucumber",
-      },
-      systems: {
-        title: "AI & Software Concepts",
-        items: "Vector Embeddings, REST APIs, Test Automation, RAG, Transformers",
+        items: "Spring Boot, React Native, Node.js, Expo, Cucumber, React, Tauri",
       },
       tools: {
         title: "Tools & Platforms",
-        items: "Git, Docker, Linux, PostgreSQL, Supabase, GitHub Copilot, Jira, Confluence",
+        items: "Git, Docker, Linux, PostgreSQL, Supabase, GitHub Copilot, Jira, ONNX Runtime",
       },
     };
 
